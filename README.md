@@ -1,6 +1,6 @@
 # Project3
 Creating a new repository so its not confusing
 
-![](Error Message.png)
+![](ErrorMessage.png)
 
-![](Success Message.png)
+![](SuccessMessage.png)
