@@ -4,12 +4,16 @@
     {{ super() }}
     <style type="text/css">
         .important { color: #336699; }
+        .img{
+            width: 100%;
+            align-content: center;
+        }
     </style>
 {% endblock %}
 {% block content %}
-    <h1>Index I should see this change with a page refresh</h1>
+    <h1>Calculator</h1>
     <p class="important">
-      Welcome to my awesome homepage.
-        <img src="{{ url_for('static', filename='images/sample.jpeg') }}">
+      Welcome to my Calculator App.
+<img class="img" src="{ url_for('static', filename='images/sample.jpeg') }">
     </p>
 {% endblock %}

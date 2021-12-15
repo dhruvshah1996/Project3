@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block head %}
+    {{ super() }}
+    <style type="text/css">
+        .important { color: #336699; }
+        .img{
+            width: 100%;
+            align-content: center;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+<div class="container">
+
+    <h1 class="mt-5 mb-4">SOLID Principles</h1>
+
+    <div class="row" style="border-top: 2px solid black">
+        <div class="col-sm-12">
+            <h2 class="mt-3">S (Single Responsibility)</h2>
+            <p>What is Single Responsibility ?</p>
+            <p>
+                a function does one thing and one thing only
+                sometimes one thing is to call other function that’s its responsibility
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="w-100 bg-orange-light py-5">
+    <div class="container" style="border-top: 2px solid black">
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <h2>O (Open and Close)</h2>
+                <p>
+                    What is Open and Close ?
+                </p>
+                <p>
+                    functions and classes should be open for extensions and closed for modifications.
+                    For example, it means that if you want to add to it, you can, but you can’t modify it as in you
+                    can’t change what the function does,
+                    but you can add to it so in the addition function in branch 4
+                    if you want to add a bunch of numbers you can, but you can’t make it, so it adds and subtracts.
+                </p>
+                <p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" style="border-top: 2px solid black">
+    <div class="row mt-3">
+        <div class="col-sm-12">
+            <h3>L (Liskov Substitution Principle)</h3>
+            <p>
+                What is Liskov Substitution Principle ?
+            </p>
+            <P>
+                it means that the children class can depend on the parent,
+                but the parent class shouldn’t depend on the child class
+
+            </P>
+        </div>
+    </div>
+
+</div>
+<div class="w-100 bg-orange-light py-5">
+    <div class="container" style="border-top: 2px solid black">
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <h2>I (Interface Segregation)</h2>
+                <p>
+                    What is Interface Segregation ?
+                </p>
+                <p>
+                    in OOP for the most part you have what’s called single inheritance
+                    which is basically parent child inheritance you can’t have parent child and grandchildren
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="w-100 bg-orange-light py-5">
+    <div class="container" style="border-top: 2px solid black">
+        <div class="row mt-3">
+            <div class="col-sm-12">
+                <h2>D (Dependency Inversion Principle)</h2>
+                <p>
+                    What is Dependency Inversion Principle ?
+                </p>
+                <p>
+                    rule to prevent your code from being to tied up and be able to have your code to be able to be re
+                    used.
+                    One of the main thing you should focus when writing code is that make sure your code can be re used
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

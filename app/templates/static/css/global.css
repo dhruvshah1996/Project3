@@ -1,0 +1,61 @@
+body {
+    font-family: Verdana;
+}
+.main-logo {
+    width: 115px;
+    height: auto;
+}
+
+.user-avatar {
+    width: 40px;
+    height: auto;
+}
+
+.navbar-nav .nav-item {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.hero-section {
+    width: 100%;
+    height: calc(100vh - 74.25px);
+    background: url('../Images/internet.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.4);
+    z-index: 0;
+}
+
+.hero-section .hero-content {
+    z-index: 1;
+    text-shadow: 1px 0px 1px rgba(0,0,0,0.5), 0px 1px 1px rgba(0,0,0,0.5),
+    2px 1px 1px rgba(0,0,0,0.5), 1px 2px 1px rgba(0,0,0,0.5),
+    3px 2px 1px rgba(0,0,0,0.5), 2px 3px 1px rgba(0,0,0,0.5),
+    4px 3px 1px rgba(0,0,0,0.5), 3px 4px 1px rgba(0,0,0,0.5),
+    5px 4px 1px rgba(0,0,0,0.5), 4px 5px 1px rgba(0,0,0,0.5),
+    6px 5px 1px rgba(0,0,0,0.5), 5px 6px 1px rgba(0,0,0,0.5),
+    7px 6px 1px rgba(0,0,0,0.5);
+}
+
+.text-orange {
+    color: rgb(254, 124, 32) !important;;
+}
+
+
+@media (max-width: 992px) {
+    .user-profile-dd {
+        flex-direction: column;
+        justify-content: center;
+        align-items: end !important;
+    }
+}
