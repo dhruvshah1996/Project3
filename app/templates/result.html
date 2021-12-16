@@ -28,15 +28,14 @@
     </tr>
     </thead>
     <tbody>
-
-    {% for item in items %}
+        {% for calc in data %}
         <tr>
-            <td>{{ item[0] }}</td>
-            <td>{{ item[1] }}</td>
-            <td>{{ item[2] }}</td>
-            <td>{{ item[3] }}</td>
+            <td>{{calc[0]}}</td>
+            <td>{{calc[1]}}</td>
+            <td>{{calc[2]}}</td>
+            <td>{{calc[3]}}</td>
         </tr>
-    {% endfor %}}
+        {% endfor %}
     </tbody>
 </table>
 <!--    <strong>Value 1: </strong> {{ value1 }} <br>-->
