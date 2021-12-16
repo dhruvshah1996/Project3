@@ -1,6 +1,7 @@
 from app.controllers.controller import ControllerBase
 from calc.calculator import Calculator
 from flask import render_template, request, flash, redirect, url_for
+import os.path
 
 class CalculatorController(ControllerBase):
     @staticmethod
@@ -19,9 +20,14 @@ class CalculatorController(ControllerBase):
             getattr(Calculator, operation)(my_tuple)
             result = str(Calculator.get_last_result_value())
 
-            f = open("results.csv", "a")
-            f.write(f"{value1},{value2},{operation},{result}")
-            f.close()
+            if not os.path.exists('results.csv'):
+                f = open("results.csv", "w")
+                f.write(f"value1,value2,operation,result\n")
+                f.close()
+
+            f1 = open("results.csv", "a")
+            f1.write(f"{value1},{value2},{operation},{result}\n")
+            f1.close()
 
             return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result)
         return render_template('calculator2.html', error=error)
