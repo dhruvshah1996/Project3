@@ -28,12 +28,15 @@
     </tr>
     </thead>
     <tbody>
+
+    {% for item in items %}
         <tr>
-            <td>{{value1}}</td>
-            <td>{{value2}}</td>
-            <td>{{operation}}</td>
-            <td>{{result}}</td>
+            <td>{{ item[0] }}</td>
+            <td>{{ item[1] }}</td>
+            <td>{{ item[2] }}</td>
+            <td>{{ item[3] }}</td>
         </tr>
+    {% endfor %}}
     </tbody>
 </table>
 <!--    <strong>Value 1: </strong> {{ value1 }} <br>-->

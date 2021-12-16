@@ -2,6 +2,7 @@ from app.controllers.controller import ControllerBase
 from calc.calculator import Calculator
 from flask import render_template, request, flash, redirect, url_for
 import os.path
+import pandas as pd
 
 class CalculatorController(ControllerBase):
     @staticmethod
@@ -29,13 +30,15 @@ class CalculatorController(ControllerBase):
             f1.write(f"{value1},{value2},{operation},{result}\n")
             f1.close()
 
-            return render_template('result.html', value1=value1, value2=value2, operation=operation, result=result)
+            df = pd.read_csv("results.csv")
+            print(df)
+
+            items = []
+            for row in df.iterrows():
+                items.append(row)
+
+            return render_template('result.html', items=items)
         return render_template('calculator2.html', error=error)
     @staticmethod
     def get():
         return render_template('calculator2.html')
-
-
-
-
-
